@@ -7,6 +7,9 @@ type FormErrorsType = {
   email?: string;
 }
 
+const emailCheckRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,3}$/i;
+const emailCheckRegexCo = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.+-]+\.co$/;
+
 const App = () => {
   const [isChecked, setIsChecked] = useState(false);
   const [emailValue, setEmailValue] = useState('');
@@ -22,23 +25,15 @@ const App = () => {
 
   const validate = (value: string) => {
     const errors = {} as FormErrorsType;
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,3}$/i;
-    const regexCo = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.+-]+\.co$/;
 
-    if (regexCo.test(value)) {
+    if (emailCheckRegexCo.test(value)) {
       errors.email = 'We are not accepting subscriptions from Colombia emails';
-    } else if (!regex.test(value)) {
+    } else if (!emailCheckRegex.test(value)) {
       errors.email = 'Please provide a valid e-mail address';
-    } else { errors.email = ''; }
+    } else {
+      errors.email = '';
+    }
     return errors;
-  };
-
-  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setEmailValue(e.target.value);
-  };
-
-  const handleCheckboxChange = () => {
-    setIsChecked(!isChecked);
   };
 
   const validateEmail = () => {
@@ -83,7 +78,7 @@ const App = () => {
                         type="email"
                         placeholder="Type your email address here..."
                         value={emailValue}
-                        onChange={handleEmailChange}
+                        onChange={(e) => setEmailValue(e.target.value)}
                         onBlur={validateEmail}
                         className="input"
                       />
@@ -114,7 +109,7 @@ const App = () => {
                           type="checkbox"
                           className="checkbox__input"
                           checked={isChecked}
-                          onChange={handleCheckboxChange}
+                          onChange={() => setIsChecked(!isChecked)}
                         />
                         <div className="checkbox__box" />
                         <span>
