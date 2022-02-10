@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/TT-MB/static/css/main.d39e90ad.chunk.css",
+    "main.js": "/TT-MB/static/js/main.be01fe26.chunk.js",
+    "main.js.map": "/TT-MB/static/js/main.be01fe26.chunk.js.map",
+    "runtime-main.js": "/TT-MB/static/js/runtime-main.e2e0f994.js",
+    "runtime-main.js.map": "/TT-MB/static/js/runtime-main.e2e0f994.js.map",
+    "static/js/2.c96e1812.chunk.js": "/TT-MB/static/js/2.c96e1812.chunk.js",
+    "static/js/2.c96e1812.chunk.js.map": "/TT-MB/static/js/2.c96e1812.chunk.js.map",
+    "static/js/3.91d96713.chunk.js": "/TT-MB/static/js/3.91d96713.chunk.js",
+    "static/js/3.91d96713.chunk.js.map": "/TT-MB/static/js/3.91d96713.chunk.js.map",
+    "index.html": "/TT-MB/index.html",
+    "static/css/main.d39e90ad.chunk.css.map": "/TT-MB/static/css/main.d39e90ad.chunk.css.map",
+    "static/js/2.c96e1812.chunk.js.LICENSE.txt": "/TT-MB/static/js/2.c96e1812.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/TT-MB/static/media/image_summer.77a0607f.png",
+    "static/media/index.css": "/TT-MB/static/media/georgia.c7967141.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e2e0f994.js",
+    "static/js/2.c96e1812.chunk.js",
+    "static/css/main.d39e90ad.chunk.css",
+    "static/js/main.be01fe26.chunk.js"
+  ]
+}
